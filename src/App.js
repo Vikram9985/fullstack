@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Whiteboard from './Whiteboard';
 
+/**
+ * App
+ * Root application component. Keeps layout minimal: header + whiteboard area.
+ * The heavy lifting is performed inside `Whiteboard`.
+ */
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Mini Excalidraw - Whiteboard</h1>
       </header>
+      <main>
+        <Whiteboard />
+      </main>
     </div>
   );
 }
